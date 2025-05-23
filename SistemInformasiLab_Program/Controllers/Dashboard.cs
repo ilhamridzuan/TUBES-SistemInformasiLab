@@ -31,7 +31,7 @@ namespace SistemInformasiLab_Program.Controllers
                 Console.WriteLine("=== SISTEM INFORMASI LABORATORIUM RSUD KAJEN ===");
                 Console.WriteLine("1. Pendaftaran");
                 Console.WriteLine("2. Antrian");
-                Console.WriteLine("3. Lihar Hasil");
+                Console.WriteLine("3. Lihat Hasil");
                 Console.WriteLine("4. History");
                 Console.WriteLine("5. Keluar");
                 Console.Write("Pilih menu: ");
@@ -66,7 +66,7 @@ namespace SistemInformasiLab_Program.Controllers
             while (true)
             {
                 Console.WriteLine("=== SISTEM INFORMASI LABORATORIUM RSUD KAJEN ===");
-                Console.WriteLine("1. Lihar Hasil");
+                Console.WriteLine("1. Lihat Hasil");
                 Console.WriteLine("2. History");
                 Console.WriteLine("3. Keluar");
                 Console.Write("Pilih menu: ");

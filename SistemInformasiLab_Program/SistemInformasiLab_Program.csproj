@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SistemInformasiLab_Library\SistemInformasiLab_Libraries.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Data\KuotaPasien.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
