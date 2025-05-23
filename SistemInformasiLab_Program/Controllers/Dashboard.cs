@@ -74,6 +74,28 @@ namespace SistemInformasiLab_Program.Controllers
                 {
                     case "1":
                         //TODO : manggil method lihat hasil
+                        var konfigurasiService = new KonfigurasiService(); // runtime config loaded here
+                        var pasienService = new PasienService(konfigurasiService);
+                        var pemeriksaanService = new PemeriksaanService();
+
+                        Console.Write("Masukkan ID Pasien: ");
+                        var id = Console.ReadLine();
+
+                        try
+                        {
+                            var pasien = pasienService.CariPasien(id);
+                            if (pasien == null)
+                            {
+                                Console.WriteLine("Pasien tidak ditemukan.");
+                                return;
+                            }
+
+                            pemeriksaanService.TampilkanHasil(pasien);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"Error: {ex.Message}");
+                        }
                         break;
                     case "2":
                         //TODO : manggil method lihat history
