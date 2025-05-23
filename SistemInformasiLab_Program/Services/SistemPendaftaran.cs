@@ -79,9 +79,17 @@ namespace SistemInformasiLab_Program.Services
 
             foreach (var p in daftarAntrian)
             {
-                Console.WriteLine($"{p.NomorAntrian}. {p.Nama} | NIK: {p.NIK} | Jenis Kelamin: {p.JenisKelamin} | Jenis Pasien: {p.JenisPasien} | Keluhan: {p.Keluhan} | Waktu: {p.WaktuDaftar}");
+                Console.WriteLine($"{p.NomorAntrian}. Nama: {p.Nama} | NIK: {p.NIK} | Jenis Kelamin: {p.JenisKelamin} | Jenis Pasien: {p.JenisPasien} | Keluhan: {p.Keluhan} | Waktu: {p.WaktuDaftar}");
             }
             Console.WriteLine();
         }
+
+        public void TambahPasienBaru(Pasien p)
+        {
+            p.NomorAntrian = daftarAntrian.Count + 1;
+            p.WaktuDaftar = DateTime.Now;
+            daftarAntrian.Add(p);
+        }
+
     }
 }

@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35818.85 d17.13
+VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemInformasiLab_API", "SistemInformasiLab_API\SistemInformasiLab_API.csproj", "{8489EE04-57AA-4EAE-9CEF-4E0292B3E680}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemInformasiLab_Program", "SistemInformasiLab_Program\SistemInformasiLab_Program.csproj", "{7DEDB9F3-8BAA-4C95-A10E-32E5CE99A2DF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Test", "Unit Test", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemInformasiLab_Libraries", "SistemInformasiLab_Library\SistemInformasiLab_Libraries.csproj", "{DE65C03B-EA44-4D7A-AA9E-4F9B21BC713B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemInformasiLab_Program.Tests", "SistemInformasiLab_Program.Tests\SistemInformasiLab_Program.Tests.csproj", "{E87317AB-A1E5-4699-955B-9B44531865E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +29,10 @@ Global
 		{DE65C03B-EA44-4D7A-AA9E-4F9B21BC713B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE65C03B-EA44-4D7A-AA9E-4F9B21BC713B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE65C03B-EA44-4D7A-AA9E-4F9B21BC713B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E87317AB-A1E5-4699-955B-9B44531865E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E87317AB-A1E5-4699-955B-9B44531865E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E87317AB-A1E5-4699-955B-9B44531865E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E87317AB-A1E5-4699-955B-9B44531865E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
