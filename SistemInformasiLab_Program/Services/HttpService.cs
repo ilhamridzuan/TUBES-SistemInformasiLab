@@ -12,6 +12,9 @@ namespace SistemInformasiLab_Program.Services
 
         public HttpService(string baseAddress)
         {
+            if (string.IsNullOrWhiteSpace(baseAddress))
+                throw new ArgumentException("Base URL tidak boleh kosong.");
+
             _client = new HttpClient
             {
                 BaseAddress = new Uri(baseAddress)
@@ -29,7 +32,14 @@ namespace SistemInformasiLab_Program.Services
                 Role = role
             });
 
-            return await response.Content.ReadFromJsonAsync<RegisterResponse>();
+            if (!response.IsSuccessStatusCode)
+            {
+                string error = await response.Content.ReadAsStringAsync();
+                return new RegisterResponse { Message = $"Registrasi gagal: {response.StatusCode} - {error}" };
+            }
+
+            return await response.Content.ReadFromJsonAsync<RegisterResponse>()
+                   ?? new RegisterResponse { Message = "Registrasi gagal: respons tidak valid." };
         }
 
         public async Task<LoginResponse> LoginAsync(string username, string password)
@@ -40,7 +50,14 @@ namespace SistemInformasiLab_Program.Services
                 Password = password
             });
 
-            return await response.Content.ReadFromJsonAsync<LoginResponse>();
+            if (!response.IsSuccessStatusCode)
+            {
+                string error = await response.Content.ReadAsStringAsync();
+                return new LoginResponse { Message = $"Login gagal: {response.StatusCode} - {error}", Role = null };
+            }
+
+            return await response.Content.ReadFromJsonAsync<LoginResponse>()
+                   ?? new LoginResponse { Message = "Login gagal: respons tidak valid.", Role = null };
         }
 
     }

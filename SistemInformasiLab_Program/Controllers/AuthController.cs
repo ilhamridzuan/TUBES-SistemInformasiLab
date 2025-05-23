@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SistemInformasiLab_Program.Services;
+using SistemInformasiLab_Program.Utils;
 
 namespace SistemInformasiLab_Program.Controllers
 {
-    class AuthController
+    public class AuthController
     {
         private readonly HttpService httpService;
 
@@ -53,23 +54,41 @@ namespace SistemInformasiLab_Program.Controllers
         {
             Console.Clear();
             Console.WriteLine("== REGISTRASI AKUN ==");
+            try
+            {
+                Console.Write("Fullname: ");
+                string fullname = Console.ReadLine();
+                InputValidator.ValidateNotEmpty(fullname, "Fullname");
 
-            Console.Write("Fullname: ");
-            string fullname = Console.ReadLine();
+                Console.Write("Email: ");
+                string email = Console.ReadLine();
+                InputValidator.ValidateNotEmpty(email, "Email");
+                InputValidator.ValidateEmail(email);
 
-            Console.Write("Email: ");
-            string email = Console.ReadLine();
+                Console.Write("Username: ");
+                string username = Console.ReadLine();
+                InputValidator.ValidateNotEmpty(username, "Username");
+                InputValidator.ValidateMinLength(username, "Username", 4);
 
-            Console.Write("Username: ");
-            string username = Console.ReadLine();
+                Console.Write("Password: ");
+                string password = Console.ReadLine();
+                InputValidator.ValidateNotEmpty(password, "Password");
+                InputValidator.ValidateMinLength(password, "Password", 8);
 
-            Console.Write("Password: ");
-            string password = Console.ReadLine();
+                string role = PilihRole();
 
-            string role = PilihRole();
+                var result = await httpService.RegisterAsync(fullname, email, username, password, role);
+                Console.WriteLine($"\n{result.Message}");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine($"\n[VALIDASI GAGAL] {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\n[ERROR] {ex.Message}");
+            }
 
-            var result = await httpService.RegisterAsync(fullname, email, username, password, role);
-            Console.WriteLine($"\n{result.Message}");
             Console.ReadKey();
         }
 
@@ -101,31 +120,45 @@ namespace SistemInformasiLab_Program.Controllers
         {
             Console.Clear();
             Console.WriteLine("== LOGIN ==");
-
-            Console.Write("Username: ");
-            string username = Console.ReadLine();
-
-            Console.Write("Password: ");
-            string password = Console.ReadLine();
-
-            var result = await httpService.LoginAsync(username, password);
-            Console.WriteLine($"\n{result.Message}");
-            if (result.Role != null)
+            try
             {
-                Console.WriteLine($"Login sebagai: {result.Role}");
-                if ( result.Role == "Pasien")
+                Console.Write("Username: ");
+                string username = Console.ReadLine();
+                InputValidator.ValidateNotEmpty(username, "Username");
+
+                Console.Write("Password: ");
+                string password = Console.ReadLine();
+                InputValidator.ValidateNotEmpty(password, "Password");
+
+                var result = await httpService.LoginAsync(username, password);
+                Console.WriteLine($"\n{result.Message}");
+                if (result.Role != null)
                 {
-                    dashboard.ShowMenuPasien();
-                } else if ( result.Role == "Dokter")
-                {
-                    dashboard.ShowMenuDokter();
-                } else if ( result.Role == "Petugas")
-                {
-                    dashboard.ShowMenuPetugas();
+                    Console.WriteLine($"Login sebagai: {result.Role}");
+                    if (result.Role == "Pasien")
+                    {
+                        dashboard.ShowMenuPasien();
+                    }
+                    else if (result.Role == "Dokter")
+                    {
+                        dashboard.ShowMenuDokter();
+                    }
+                    else if (result.Role == "Petugas")
+                    {
+                        dashboard.ShowMenuPetugas();
+                    }
+                    return true;
                 }
-                return true;
+                Console.WriteLine("Login gagal. Tekan tombol untuk mencoba lagi.");
             }
-            Console.WriteLine("Login gagal. Tekan tombol untuk mencoba lagi.");
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine($"\n[VALIDASI GAGAL] {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\n[ERROR] {ex.Message}");
+            }
             Console.ReadKey();
             return false;
         }
