@@ -11,6 +11,7 @@ namespace SistemInformasiLab_Program.Controllers
     {
         private readonly HttpService httpService;
 
+        Dashboard dashboard = new Dashboard();
         public AuthController()
         {
             httpService = new HttpService("http://localhost:5031/");
@@ -111,7 +112,16 @@ namespace SistemInformasiLab_Program.Controllers
             if (result.Role != null)
             {
                 Console.WriteLine($"Login sebagai: {result.Role}");
-                // TODO: Arahkan ke dashboard berdasarkan role
+                if ( result.Role == "Pasien")
+                {
+                    dashboard.ShowMenuPasien();
+                } else if ( result.Role == "Dokter")
+                {
+                    dashboard.ShowMenuDokter();
+                } else if ( result.Role == "Petugas")
+                {
+                    dashboard.ShowMenuPetugas();
+                }
             }
 
             Console.ReadKey();
