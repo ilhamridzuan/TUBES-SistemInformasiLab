@@ -1,0 +1,17 @@
+﻿[
+  {
+    "Nama": "Hemoglobin",
+    "BatasBawah": 11.7,
+    "BatasAtas": 15.5
+  },
+  {
+    "Nama": "Leukosit",
+    "BatasBawah": 3.6,
+    "BatasAtas": 11
+  },
+  {
+    "Nama": "MCV",
+    "BatasBawah": 76,
+    "BatasAtas": 96
+  }
+]
