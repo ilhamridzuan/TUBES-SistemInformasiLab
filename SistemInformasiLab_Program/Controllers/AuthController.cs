@@ -19,7 +19,8 @@ namespace SistemInformasiLab_Program.Controllers
 
         public async Task ShowMenuAsync()
         {
-            while (true)
+            bool loggedIn = false;
+            while (!loggedIn)
             {
                 Console.Clear();
                 Console.WriteLine("=== SISTEM INFORMASI LABORATORIUM ===");
@@ -96,7 +97,7 @@ namespace SistemInformasiLab_Program.Controllers
             }
         }
 
-        private async Task HandleLoginAsync()
+        private async Task<bool> HandleLoginAsync()
         {
             Console.Clear();
             Console.WriteLine("== LOGIN ==");
@@ -122,9 +123,11 @@ namespace SistemInformasiLab_Program.Controllers
                 {
                     dashboard.ShowMenuPetugas();
                 }
+                return true;
             }
-
+            Console.WriteLine("Login gagal. Tekan tombol untuk mencoba lagi.");
             Console.ReadKey();
+            return false;
         }
     }
 }
