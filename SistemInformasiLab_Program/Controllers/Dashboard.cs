@@ -44,7 +44,7 @@ namespace SistemInformasiLab_Program.Controllers
                         sistem.LihatAntrian();
                         break;
                     case "3":
-                        //TODO : manggil method lihat hasil
+                        LihatHasilPasien();
                         break;
                     case "4":
                         //TODO : manggil method lihat history
@@ -74,28 +74,7 @@ namespace SistemInformasiLab_Program.Controllers
                 {
                     case "1":
                         //TODO : manggil method lihat hasil
-                        var konfigurasiService = new KonfigurasiService(); // runtime config loaded here
-                        var pasienService = new PasienService(konfigurasiService);
-                        var pemeriksaanService = new PemeriksaanService();
-
-                        Console.Write("Masukkan ID Pasien: ");
-                        var id = Console.ReadLine();
-
-                        try
-                        {
-                            var pasien = pasienService.CariPasien(id);
-                            if (pasien == null)
-                            {
-                                Console.WriteLine("Pasien tidak ditemukan.");
-                                return;
-                            }
-
-                            pemeriksaanService.TampilkanHasil(pasien);
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine($"Error: {ex.Message}");
-                        }
+                        LihatHasilPasien();
                         break;
                     case "2":
                         //TODO : manggil method lihat history
@@ -112,7 +91,71 @@ namespace SistemInformasiLab_Program.Controllers
 
         public void ShowMenuPetugas()
         {
-            //TODO : Tambahin menu untuk petugas
+
+            while (true)
+            {
+                Console.WriteLine("=== MENU PETUGAS ===");
+                Console.WriteLine("1. Lihat Semua Hasil Pemeriksaan");
+                Console.WriteLine("2. Tambah Hasil Pemeriksaan");
+                Console.WriteLine("3. Update Hasil Pemeriksaan");
+                Console.WriteLine("4. Hapus Hasil Pemeriksaan");
+                Console.WriteLine("5. Transisi Status Pemeriksaan");
+                Console.WriteLine("6. Kembali");
+                Console.Write("Pilih menu: ");
+                string pilihan = Console.ReadLine();
+
+                switch (pilihan)
+                {
+                    case "1":
+                        
+                        break;
+                    case "2":
+                        
+                        break;
+                    case "3":
+                        
+                        break;
+                    case "4":
+                        
+                        break;
+                    case "5":
+                        
+                        break;
+                    case "6":
+                        return;
+                    default:
+                        Console.WriteLine("Pilihan tidak tersedia.\n");
+                        break;
+                }
+            }
         }
+
+
+        private void LihatHasilPasien()
+        {
+            var konfigurasiService = new KonfigurasiService(); // runtime config loaded here
+            var pasienService = new PasienService(konfigurasiService);
+            var pemeriksaanService = new PemeriksaanService();
+
+            Console.Write("Masukkan ID Pasien: ");
+            var id = Console.ReadLine();
+
+            try
+            {
+                var pasien = pasienService.CariPasien(id);
+                if (pasien == null)
+                {
+                    Console.WriteLine("Pasien tidak ditemukan.");
+                    return;
+                }
+
+                pemeriksaanService.TampilkanHasil(pasien);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
     }
 }
