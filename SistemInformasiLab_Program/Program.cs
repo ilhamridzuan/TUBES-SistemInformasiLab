@@ -1,11 +1,50 @@
-﻿using SistemInformasiLab_Program.Controllers;
-using System.Threading.Tasks;
 
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.Json;
+using SistemInformasiLab_Program.Services;
+using System;
+using System.Collections.Generic;
+using SistemInformasiLab_Program.Controllers;
+using System.Threading.Tasks;
 class Program
 {
-    static async Task Main(string[] args)
+    static async Task Main(String[] args)
     {
         AuthController controller = new AuthController();
         await controller.ShowMenuAsync(); // Menampilkan menu login/registrasi
+      
+        var config = new ConfigurationBuilder()
+            .AddJsonFile("Data/KuotaPasien.json")
+            .Build();
+
+
+        int batasAntrian = int.Parse(config["Kuota"]);
+        var sistem = new SistemPendaftaran(batasAntrian);
+
+        while (true)
+        {
+            Console.WriteLine("=== SISTEM PENDAFTARAN LABORATORIUM RSUD KAJEN ===");
+            Console.WriteLine("1. Pendaftaran");
+            Console.WriteLine("2. Antrian");
+            Console.WriteLine("3. Keluar");
+            Console.Write("Pilih menu: ");
+            string pilihan = Console.ReadLine();
+
+            switch (pilihan)
+            {
+                case "1":
+                    sistem.DaftarPasien();
+                    break;
+                case "2":
+                    sistem.LihatAntrian();
+                    break;
+                case "3":
+                    Console.WriteLine("Terima kasih!");
+                    return;
+                default:
+                    Console.WriteLine("Pilihan tidak tersedia.\n");
+                    break;
+            }
+        }
     }
 }
