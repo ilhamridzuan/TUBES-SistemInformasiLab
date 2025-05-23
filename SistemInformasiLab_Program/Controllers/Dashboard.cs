@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
+using SistemInformasiLab_Program.Models;
 using SistemInformasiLab_Program.Services;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -91,45 +93,43 @@ namespace SistemInformasiLab_Program.Controllers
 
         public void ShowMenuPetugas()
         {
+            var controller = new HasilPemeriksaanController();
 
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("=== MENU PETUGAS ===");
                 Console.WriteLine("1. Lihat Semua Hasil Pemeriksaan");
                 Console.WriteLine("2. Tambah Hasil Pemeriksaan");
                 Console.WriteLine("3. Update Hasil Pemeriksaan");
                 Console.WriteLine("4. Hapus Hasil Pemeriksaan");
-                Console.WriteLine("5. Transisi Status Pemeriksaan");
-                Console.WriteLine("6. Kembali");
+                Console.WriteLine("5. Kembali");
                 Console.Write("Pilih menu: ");
                 string pilihan = Console.ReadLine();
 
                 switch (pilihan)
                 {
                     case "1":
-                        
+                        controller.TampilkanSemuaAsync();
                         break;
                     case "2":
-                        
+                        controller.TambahAsync();
                         break;
                     case "3":
-                        
+                        controller.UpdateAsync();
                         break;
                     case "4":
-                        
+                        controller.HapusAsync();
                         break;
                     case "5":
-                        
-                        break;
-                    case "6":
                         return;
                     default:
-                        Console.WriteLine("Pilihan tidak tersedia.\n");
+                        Console.WriteLine("Pilihan tidak tersedia.");
+                        Console.ReadKey();
                         break;
                 }
             }
         }
-
 
         private void LihatHasilPasien()
         {

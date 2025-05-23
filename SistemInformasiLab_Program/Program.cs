@@ -12,8 +12,6 @@ class Program
     static async Task Main(String[] args)
     {
         AuthController controller = new AuthController();
-        await controller.ShowMenuAsync(); // Menampilkan menu
-      
-        
+        await controller.ShowMenuAsync(); // Menampilkan menu  
     }
 }
