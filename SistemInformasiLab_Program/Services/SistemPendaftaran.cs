@@ -83,13 +83,5 @@ namespace SistemInformasiLab_Program.Services
             }
             Console.WriteLine();
         }
-
-        public void TambahPasienBaru(Pasien p)
-        {
-            p.NomorAntrian = daftarAntrian.Count + 1;
-            p.WaktuDaftar = DateTime.Now;
-            daftarAntrian.Add(p);
-        }
-
     }
 }

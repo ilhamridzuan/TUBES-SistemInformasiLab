@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest-Auth", "UnitTest-A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestLihatHasil", "UnitTestLihatHasil\UnitTestLihatHasil.csproj", "{D57A8BC5-31F2-4B6D-A85A-E2E2A1E1CC08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPengelolaan", "TestPengelolaan\TestPengelolaan.csproj", "{828C3CF2-17E9-4D7E-A0F5-0651FB050936}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{D57A8BC5-31F2-4B6D-A85A-E2E2A1E1CC08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D57A8BC5-31F2-4B6D-A85A-E2E2A1E1CC08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D57A8BC5-31F2-4B6D-A85A-E2E2A1E1CC08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{828C3CF2-17E9-4D7E-A0F5-0651FB050936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{828C3CF2-17E9-4D7E-A0F5-0651FB050936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{828C3CF2-17E9-4D7E-A0F5-0651FB050936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{828C3CF2-17E9-4D7E-A0F5-0651FB050936}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
