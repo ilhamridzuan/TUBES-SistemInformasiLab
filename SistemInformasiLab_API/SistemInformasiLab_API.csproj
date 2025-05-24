@@ -15,4 +15,8 @@
     <Folder Include="Data\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SistemInformasiLab_Library\SistemInformasiLab_Libraries.csproj" />
+  </ItemGroup>
+
 </Project>
