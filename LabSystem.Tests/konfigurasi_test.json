@@ -1,0 +1,7 @@
+﻿{
+  "NilaiNormal": {
+    "Hemoglobin": [ 11.7, 15.5 ],
+    "Leukosit": [ 3.6, 11 ],
+    "MCV": [ 76, 96 ]
+  }
+}

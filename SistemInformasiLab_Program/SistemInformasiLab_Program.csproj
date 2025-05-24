@@ -20,7 +20,7 @@
     <None Update="Data\KuotaPasien.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Konfigurasi.json">
+    <None Update="konfigurasi.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
