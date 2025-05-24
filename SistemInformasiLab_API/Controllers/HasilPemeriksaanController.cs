@@ -13,7 +13,6 @@ namespace SistemInformasiLab_API.Controllers
     {
         private static readonly List<HasilPemeriksaan> _data = new List<HasilPemeriksaan>();
 
-        // DFA-style validation: NamaPasien hanya boleh huruf dan spasi
         private bool ValidasiNama(string nama)
         {
             var dfaRegex = new Regex(@"^[A-Za-z ]+$");
