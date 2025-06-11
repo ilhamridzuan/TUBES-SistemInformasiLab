@@ -100,9 +100,9 @@ namespace SistemInformasiLab_GUI.view
         }
         private void btnBeranda_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            /*this.Hide();
             var beranda = new DashboardPasien();
-            beranda.Show();
+            beranda.Show();*/
         }
 
     }
