@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestLihatHasil", "UnitT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPengelolaan", "TestPengelolaan\TestPengelolaan.csproj", "{828C3CF2-17E9-4D7E-A0F5-0651FB050936}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemInformasiLab_GUI", "SistemInformasiLab_GUI\SistemInformasiLab_GUI.csproj", "{8B32D109-0E2C-4ADF-8EB9-FC1D367A801A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{828C3CF2-17E9-4D7E-A0F5-0651FB050936}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{828C3CF2-17E9-4D7E-A0F5-0651FB050936}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{828C3CF2-17E9-4D7E-A0F5-0651FB050936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B32D109-0E2C-4ADF-8EB9-FC1D367A801A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B32D109-0E2C-4ADF-8EB9-FC1D367A801A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B32D109-0E2C-4ADF-8EB9-FC1D367A801A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B32D109-0E2C-4ADF-8EB9-FC1D367A801A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
