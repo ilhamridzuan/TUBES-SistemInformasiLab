@@ -45,7 +45,6 @@ namespace SistemInformasiLab_GUI.view
 
             foreach (var pasien in semuaPasien.OrderBy(p => p.NomorAntrian))
             {
-                // Buat kunci unik dari data pasien
                 string kunciUnik = $"{pasien.Nama}-{pasien.TanggalLahir:yyyyMMdd}-{pasien.Telepon}";
 
                 if (!pasienYangSudahDitambahkan.Contains(kunciUnik))
@@ -80,5 +79,12 @@ namespace SistemInformasiLab_GUI.view
             Clipboard.SetText(lblNomorSaya.Text);
             MessageBox.Show("Nomor antrian Anda telah disalin.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        private void btnBeranda_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var beranda = new DashboardPasien();
+            beranda.Show();
+        }
+
     }
 }

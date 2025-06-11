@@ -2,30 +2,8 @@
 {
     partial class PendaftaranForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.Label labelJudul;
-        private System.Windows.Forms.Label labelNama;
-        private System.Windows.Forms.TextBox txtNama;
-        private System.Windows.Forms.Label labelTanggalLahir;
-        private System.Windows.Forms.DateTimePicker dateLahir;
-        private System.Windows.Forms.Label labelTelepon;
-        private System.Windows.Forms.TextBox txtTelepon;
-        private System.Windows.Forms.Label labelEmail;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label labelAlamat;
-        private System.Windows.Forms.TextBox txtAlamat;
-        private System.Windows.Forms.Label labelSurat;
-        private System.Windows.Forms.Label lblSuratFile;
-        private System.Windows.Forms.Button btnPilihSurat;
-        private System.Windows.Forms.Button btnKirim;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -54,6 +32,7 @@
             this.lblSuratFile = new System.Windows.Forms.Label();
             this.btnPilihSurat = new System.Windows.Forms.Button();
             this.btnKirim = new System.Windows.Forms.Button();
+            this.btnBeranda = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
@@ -82,7 +61,6 @@
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(200, 22);
             this.txtNama.TabIndex = 2;
-
             // 
             // labelTanggalLahir
             // 
@@ -186,6 +164,16 @@
             this.btnKirim.UseVisualStyleBackColor = true;
             this.btnKirim.Click += new System.EventHandler(this.btnKirim_Click);
             // 
+            // btnBeranda
+            // 
+            this.btnBeranda.Location = new System.Drawing.Point(260, 300);
+            this.btnBeranda.Name = "btnBeranda";
+            this.btnBeranda.Size = new System.Drawing.Size(100, 30);
+            this.btnBeranda.TabIndex = 15;
+            this.btnBeranda.Text = "Beranda";
+            this.btnBeranda.UseVisualStyleBackColor = true;
+            this.btnBeranda.Click += new System.EventHandler(this.btnBeranda_Click);
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.Filter = "PDF Files|*.pdf|Image Files|*.jpg;*.jpeg;*.png|All Files|*.*";
@@ -209,12 +197,31 @@
             this.Controls.Add(this.lblSuratFile);
             this.Controls.Add(this.btnPilihSurat);
             this.Controls.Add(this.btnKirim);
+            this.Controls.Add(this.btnBeranda);
             this.Name = "PendaftaranForm";
             this.Text = "Formulir Pendaftaran";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
         #endregion
+
+        private System.Windows.Forms.Label labelJudul;
+        private System.Windows.Forms.Label labelNama;
+        private System.Windows.Forms.TextBox txtNama;
+        private System.Windows.Forms.Label labelTanggalLahir;
+        private System.Windows.Forms.DateTimePicker dateLahir;
+        private System.Windows.Forms.Label labelTelepon;
+        private System.Windows.Forms.TextBox txtTelepon;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label labelAlamat;
+        private System.Windows.Forms.TextBox txtAlamat;
+        private System.Windows.Forms.Label labelSurat;
+        private System.Windows.Forms.Label lblSuratFile;
+        private System.Windows.Forms.Button btnPilihSurat;
+        private System.Windows.Forms.Button btnKirim;
+        private System.Windows.Forms.Button btnBeranda;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

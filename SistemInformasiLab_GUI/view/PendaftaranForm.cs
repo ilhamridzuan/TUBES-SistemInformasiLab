@@ -50,7 +50,6 @@ namespace SistemInformasiLab_GUI.view
 
         private async void btnKirim_Click(object sender, EventArgs e)
         {
-            // Table-driven field validation
             var fields = new Dictionary<string, string>
     {
             { "Nama", txtNama.Text.Trim() },
@@ -99,5 +98,12 @@ namespace SistemInformasiLab_GUI.view
                 MessageBox.Show("Terjadi kesalahan saat mendaftar:\n" + ex.Message);
             }
         }
+        private void btnBeranda_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var beranda = new DashboardPasien();
+            beranda.Show();
+        }
+
     }
 }
