@@ -19,7 +19,8 @@ namespace SistemInformasiLab_GUI.view
             InitializeComponent();
             _controller = new HasilPemeriksaanController();
         }
-        private async void FormDataHasil_Load(object sender, EventArgs e)
+
+        private async void LihatHasilFormDokter_LoadAsync(object sender, EventArgs e)
         {
             try
             {
@@ -32,7 +33,7 @@ namespace SistemInformasiLab_GUI.view
             }
         }
 
-        private void btnBeranda_Click(object sender, EventArgs e)
+        private void btnBeranda_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             DashboardDokter dashboard = new DashboardDokter();
