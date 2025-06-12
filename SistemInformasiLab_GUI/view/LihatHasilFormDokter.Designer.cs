@@ -62,14 +62,14 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 60);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 94);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 390);
+            this.dataGridView1.Size = new System.Drawing.Size(1200, 609);
             this.dataGridView1.TabIndex = 4;
             // 
             // panelTop
@@ -79,18 +79,21 @@
             this.panelTop.Controls.Add(this.labelTitle);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(800, 60);
+            this.panelTop.Size = new System.Drawing.Size(1200, 94);
             this.panelTop.TabIndex = 5;
             // 
             // btnBeranda
             // 
-            this.btnBeranda.Location = new System.Drawing.Point(657, 22);
+            this.btnBeranda.Location = new System.Drawing.Point(986, 34);
+            this.btnBeranda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBeranda.Name = "btnBeranda";
-            this.btnBeranda.Size = new System.Drawing.Size(98, 31);
+            this.btnBeranda.Size = new System.Drawing.Size(147, 48);
             this.btnBeranda.TabIndex = 1;
             this.btnBeranda.Text = "Beranda";
             this.btnBeranda.UseVisualStyleBackColor = true;
+            this.btnBeranda.Click += new System.EventHandler(this.btnBeranda_Click_1);
             // 
             // labelTitle
             // 
@@ -98,21 +101,25 @@
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.labelTitle.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.labelTitle.Location = new System.Drawing.Point(0, 0);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(800, 60);
+            this.labelTitle.Size = new System.Drawing.Size(1200, 94);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Data Hasil Pemeriksaan";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LihatHasilFormDokter
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 703);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panelTop);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LihatHasilFormDokter";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LihatHasilFormDokter";
+            this.Load += new System.EventHandler(this.LihatHasilFormDokter_LoadAsync);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.ResumeLayout(false);
