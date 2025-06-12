@@ -90,7 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controller\AuthController.cs" />
+    <Compile Include="controller\HasilPemeriksaanController.cs" />
     <Compile Include="controller\PasienController.cs" />
+    <Compile Include="model\HasilPemeriksaan.cs" />
     <Compile Include="model\LoginResponse.cs" />
     <Compile Include="model\PasienModel.cs" />
     <Compile Include="model\RegisterResponse.cs" />
@@ -133,6 +135,12 @@
     </Compile>
     <Compile Include="view\PendaftaranForm.Designer.cs">
       <DependentUpon>PendaftaranForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\PengelolaanDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\PengelolaanDataForm.Designer.cs">
+      <DependentUpon>PengelolaanDataForm.cs</DependentUpon>
     </Compile>
     <Compile Include="view\RegistrasiForm.cs">
       <SubType>Form</SubType>
