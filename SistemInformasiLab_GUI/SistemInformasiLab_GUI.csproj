@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.6, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.6\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -44,9 +47,11 @@
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.IO.Pipelines, Version=9.0.0.6, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.Pipelines.9.0.6\lib\net462\System.IO.Pipelines.dll</HintPath>
     </Reference>
+    <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -72,6 +77,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -83,21 +89,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\AuthController.cs" />
     <Compile Include="controller\PasienController.cs" />
+    <Compile Include="model\LoginResponse.cs" />
     <Compile Include="model\PasienModel.cs" />
+    <Compile Include="model\RegisterResponse.cs" />
+    <Compile Include="model\RoleItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utils\InputValidator.cs" />
     <Compile Include="view\AntrianForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\AntrianForm.Designer.cs">
       <DependentUpon>AntrianForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\DashboardDokter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\DashboardDokter.Designer.cs">
+      <DependentUpon>DashboardDokter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\DashboardPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\DashboardPasien.Designer.cs">
+      <DependentUpon>DashboardPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\DashboardPetugas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\DashboardPetugas.Designer.cs">
+      <DependentUpon>DashboardPetugas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\PendaftaranForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\PendaftaranForm.Designer.cs">
       <DependentUpon>PendaftaranForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\RegistrasiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\RegistrasiForm.Designer.cs">
+      <DependentUpon>RegistrasiForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,6 +151,15 @@
     </Compile>
     <EmbeddedResource Include="view\AntrianForm.resx">
       <DependentUpon>AntrianForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\DashboardDokter.resx">
+      <DependentUpon>DashboardDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\DashboardPasien.resx">
+      <DependentUpon>DashboardPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\DashboardPetugas.resx">
+      <DependentUpon>DashboardPetugas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\PendaftaranForm.resx">
       <DependentUpon>PendaftaranForm.cs</DependentUpon>

@@ -42,7 +42,7 @@
             this.labelJudul.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.labelJudul.Location = new System.Drawing.Point(90, 20);
             this.labelJudul.Name = "labelJudul";
-            this.labelJudul.Size = new System.Drawing.Size(258, 32);
+            this.labelJudul.Size = new System.Drawing.Size(404, 51);
             this.labelJudul.TabIndex = 0;
             this.labelJudul.Text = "Formulir Pendaftaran";
             // 
@@ -51,7 +51,7 @@
             this.labelNama.AutoSize = true;
             this.labelNama.Location = new System.Drawing.Point(30, 65);
             this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(106, 16);
+            this.labelNama.Size = new System.Drawing.Size(169, 25);
             this.labelNama.TabIndex = 1;
             this.labelNama.Text = "Nama Lengkap :";
             // 
@@ -59,7 +59,7 @@
             // 
             this.txtNama.Location = new System.Drawing.Point(150, 62);
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(200, 22);
+            this.txtNama.Size = new System.Drawing.Size(200, 31);
             this.txtNama.TabIndex = 2;
             // 
             // labelTanggalLahir
@@ -67,7 +67,7 @@
             this.labelTanggalLahir.AutoSize = true;
             this.labelTanggalLahir.Location = new System.Drawing.Point(30, 100);
             this.labelTanggalLahir.Name = "labelTanggalLahir";
-            this.labelTanggalLahir.Size = new System.Drawing.Size(96, 16);
+            this.labelTanggalLahir.Size = new System.Drawing.Size(156, 25);
             this.labelTanggalLahir.TabIndex = 3;
             this.labelTanggalLahir.Text = "Tanggal Lahir :";
             // 
@@ -75,7 +75,7 @@
             // 
             this.dateLahir.Location = new System.Drawing.Point(150, 97);
             this.dateLahir.Name = "dateLahir";
-            this.dateLahir.Size = new System.Drawing.Size(200, 22);
+            this.dateLahir.Size = new System.Drawing.Size(200, 31);
             this.dateLahir.TabIndex = 4;
             // 
             // labelTelepon
@@ -83,7 +83,7 @@
             this.labelTelepon.AutoSize = true;
             this.labelTelepon.Location = new System.Drawing.Point(30, 135);
             this.labelTelepon.Name = "labelTelepon";
-            this.labelTelepon.Size = new System.Drawing.Size(108, 16);
+            this.labelTelepon.Size = new System.Drawing.Size(171, 25);
             this.labelTelepon.TabIndex = 5;
             this.labelTelepon.Text = "Nomor Telepon :";
             // 
@@ -91,7 +91,7 @@
             // 
             this.txtTelepon.Location = new System.Drawing.Point(150, 132);
             this.txtTelepon.Name = "txtTelepon";
-            this.txtTelepon.Size = new System.Drawing.Size(200, 22);
+            this.txtTelepon.Size = new System.Drawing.Size(200, 31);
             this.txtTelepon.TabIndex = 6;
             // 
             // labelEmail
@@ -99,7 +99,7 @@
             this.labelEmail.AutoSize = true;
             this.labelEmail.Location = new System.Drawing.Point(30, 170);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(47, 16);
+            this.labelEmail.Size = new System.Drawing.Size(77, 25);
             this.labelEmail.TabIndex = 7;
             this.labelEmail.Text = "Email :";
             // 
@@ -107,7 +107,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(150, 167);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 22);
+            this.txtEmail.Size = new System.Drawing.Size(200, 31);
             this.txtEmail.TabIndex = 8;
             // 
             // labelAlamat
@@ -115,7 +115,7 @@
             this.labelAlamat.AutoSize = true;
             this.labelAlamat.Location = new System.Drawing.Point(30, 205);
             this.labelAlamat.Name = "labelAlamat";
-            this.labelAlamat.Size = new System.Drawing.Size(55, 16);
+            this.labelAlamat.Size = new System.Drawing.Size(90, 25);
             this.labelAlamat.TabIndex = 9;
             this.labelAlamat.Text = "Alamat :";
             // 
@@ -123,7 +123,7 @@
             // 
             this.txtAlamat.Location = new System.Drawing.Point(150, 202);
             this.txtAlamat.Name = "txtAlamat";
-            this.txtAlamat.Size = new System.Drawing.Size(200, 22);
+            this.txtAlamat.Size = new System.Drawing.Size(200, 31);
             this.txtAlamat.TabIndex = 10;
             // 
             // labelSurat
@@ -131,7 +131,7 @@
             this.labelSurat.AutoSize = true;
             this.labelSurat.Location = new System.Drawing.Point(30, 240);
             this.labelSurat.Name = "labelSurat";
-            this.labelSurat.Size = new System.Drawing.Size(96, 16);
+            this.labelSurat.Size = new System.Drawing.Size(160, 25);
             this.labelSurat.TabIndex = 11;
             this.labelSurat.Text = "Surat Rujukan :";
             // 
@@ -140,7 +140,7 @@
             this.lblSuratFile.AutoSize = true;
             this.lblSuratFile.Location = new System.Drawing.Point(150, 265);
             this.lblSuratFile.Name = "lblSuratFile";
-            this.lblSuratFile.Size = new System.Drawing.Size(130, 16);
+            this.lblSuratFile.Size = new System.Drawing.Size(210, 25);
             this.lblSuratFile.TabIndex = 0;
             this.lblSuratFile.Text = "Belum ada file dipilih";
             // 
@@ -199,9 +199,11 @@
             this.Controls.Add(this.btnKirim);
             this.Controls.Add(this.btnBeranda);
             this.Name = "PendaftaranForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulir Pendaftaran";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

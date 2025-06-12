@@ -30,9 +30,10 @@
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblHeader.Location = new System.Drawing.Point(120, 25);
+            this.lblHeader.Location = new System.Drawing.Point(180, 39);
+            this.lblHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(211, 37);
+            this.lblHeader.Size = new System.Drawing.Size(330, 59);
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "Nomor Antrian";
             // 
@@ -41,9 +42,10 @@
             this.lblNomorSaya.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.lblNomorSaya.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
             this.lblNomorSaya.ForeColor = System.Drawing.Color.White;
-            this.lblNomorSaya.Location = new System.Drawing.Point(133, 74);
+            this.lblNomorSaya.Location = new System.Drawing.Point(200, 116);
+            this.lblNomorSaya.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomorSaya.Name = "lblNomorSaya";
-            this.lblNomorSaya.Size = new System.Drawing.Size(213, 74);
+            this.lblNomorSaya.Size = new System.Drawing.Size(320, 116);
             this.lblNomorSaya.TabIndex = 1;
             this.lblNomorSaya.Text = "000";
             this.lblNomorSaya.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -57,9 +59,10 @@
             this.listViewAntrian.FullRowSelect = true;
             this.listViewAntrian.GridLines = true;
             this.listViewAntrian.HideSelection = false;
-            this.listViewAntrian.Location = new System.Drawing.Point(40, 172);
+            this.listViewAntrian.Location = new System.Drawing.Point(60, 269);
+            this.listViewAntrian.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listViewAntrian.Name = "listViewAntrian";
-            this.listViewAntrian.Size = new System.Drawing.Size(399, 245);
+            this.listViewAntrian.Size = new System.Drawing.Size(596, 381);
             this.listViewAntrian.TabIndex = 2;
             this.listViewAntrian.UseCompatibleStateImageBehavior = false;
             this.listViewAntrian.View = System.Windows.Forms.View.Details;
@@ -78,17 +81,19 @@
             // 
             this.lblUrutanSaya.AutoSize = true;
             this.lblUrutanSaya.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblUrutanSaya.Location = new System.Drawing.Point(107, 443);
+            this.lblUrutanSaya.Location = new System.Drawing.Point(160, 692);
+            this.lblUrutanSaya.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUrutanSaya.Name = "lblUrutanSaya";
-            this.lblUrutanSaya.Size = new System.Drawing.Size(228, 23);
+            this.lblUrutanSaya.Size = new System.Drawing.Size(354, 37);
             this.lblUrutanSaya.TabIndex = 3;
             this.lblUrutanSaya.Text = "Urutan Anda: 0 dari 0 pasien";
             // 
             // btnBeranda
             // 
-            this.btnBeranda.Location = new System.Drawing.Point(188, 478);
+            this.btnBeranda.Location = new System.Drawing.Point(282, 747);
+            this.btnBeranda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBeranda.Name = "btnBeranda";
-            this.btnBeranda.Size = new System.Drawing.Size(100, 30);
+            this.btnBeranda.Size = new System.Drawing.Size(150, 47);
             this.btnBeranda.TabIndex = 4;
             this.btnBeranda.Text = "Beranda";
             this.btnBeranda.UseVisualStyleBackColor = true;
@@ -96,15 +101,16 @@
             // 
             // AntrianForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 520);
+            this.ClientSize = new System.Drawing.Size(728, 812);
             this.Controls.Add(this.btnBeranda);
             this.Controls.Add(this.lblUrutanSaya);
             this.Controls.Add(this.listViewAntrian);
             this.Controls.Add(this.lblNomorSaya);
             this.Controls.Add(this.lblHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AntrianForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Antrian";
