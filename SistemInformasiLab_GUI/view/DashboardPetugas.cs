@@ -19,7 +19,9 @@ namespace SistemInformasiLab_GUI.view
 
         private void btnKelola_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            PengelolaanDataForm kelolaData = new PengelolaanDataForm();
+            kelolaData.Show();
         }
 
         private void btnLihatHasil_Click(object sender, EventArgs e)

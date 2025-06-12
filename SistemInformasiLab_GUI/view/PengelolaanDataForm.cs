@@ -182,5 +182,12 @@ namespace SistemInformasiLab_GUI.view
                 Tanggal = dtpTanggal.Value
             };
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DashboardPetugas dashboard = new DashboardPetugas();
+            dashboard.Show();
+        }
     }
 }
