@@ -99,6 +99,7 @@
     <Compile Include="model\RoleItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utils\AppHelper.cs" />
     <Compile Include="utils\InputValidator.cs" />
     <Compile Include="view\AntrianForm.cs">
       <SubType>Form</SubType>
@@ -123,6 +124,24 @@
     </Compile>
     <Compile Include="view\DashboardPetugas.Designer.cs">
       <DependentUpon>DashboardPetugas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\LihatHasilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\LihatHasilForm.Designer.cs">
+      <DependentUpon>LihatHasilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\LihatHasilFormDokter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\LihatHasilFormDokter.Designer.cs">
+      <DependentUpon>LihatHasilFormDokter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\LihatHasilFormPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\LihatHasilFormPasien.Designer.cs">
+      <DependentUpon>LihatHasilFormPasien.cs</DependentUpon>
     </Compile>
     <Compile Include="view\LoginForm.cs">
       <SubType>Form</SubType>
@@ -168,6 +187,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\DashboardPetugas.resx">
       <DependentUpon>DashboardPetugas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\LihatHasilForm.resx">
+      <DependentUpon>LihatHasilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\LihatHasilFormDokter.resx">
+      <DependentUpon>LihatHasilFormDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\LihatHasilFormPasien.resx">
+      <DependentUpon>LihatHasilFormPasien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\PendaftaranForm.resx">
       <DependentUpon>PendaftaranForm.cs</DependentUpon>
