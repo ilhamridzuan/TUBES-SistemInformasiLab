@@ -104,6 +104,24 @@
     <Compile Include="view\AntrianForm.Designer.cs">
       <DependentUpon>AntrianForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\DashboardDokter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\DashboardDokter.Designer.cs">
+      <DependentUpon>DashboardDokter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\DashboardPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\DashboardPasien.Designer.cs">
+      <DependentUpon>DashboardPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\DashboardPetugas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\DashboardPetugas.Designer.cs">
+      <DependentUpon>DashboardPetugas.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +151,15 @@
     </Compile>
     <EmbeddedResource Include="view\AntrianForm.resx">
       <DependentUpon>AntrianForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\DashboardDokter.resx">
+      <DependentUpon>DashboardDokter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\DashboardPasien.resx">
+      <DependentUpon>DashboardPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\DashboardPetugas.resx">
+      <DependentUpon>DashboardPetugas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\PendaftaranForm.resx">
       <DependentUpon>PendaftaranForm.cs</DependentUpon>

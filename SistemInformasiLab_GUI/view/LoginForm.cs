@@ -35,21 +35,21 @@ namespace SistemInformasiLab_GUI.view
             {
                 if (result.Role == "Pasien")
                 {
-                    /*DashboardPasien dashboardPasien = new DashboardPasien();
+                    DashboardPasien dashboardPasien = new DashboardPasien();
                     dashboardPasien.Show();
-                    this.Hide();*/
+                    this.Hide();
                 }
                 else if (result.Role == "Dokter")
                 {
-                    /*DashboardDokter dashboardDokter = new DashboardDokter();
+                    DashboardDokter dashboardDokter = new DashboardDokter();
                     dashboardDokter.Show();
-                    this.Hide();*/
+                    this.Hide();
                 }
                 else if (result.Role == "Petugas")
                 {
-                    /*DashboardPetugas dashboardPetugas = new DashboardPetugas();
+                    DashboardPetugas dashboardPetugas = new DashboardPetugas();
                     dashboardPetugas.Show();
-                    this.Hide();*/
+                    this.Hide();
                 }
             }
         }
