@@ -172,6 +172,9 @@
     <EmbeddedResource Include="view\PendaftaranForm.resx">
       <DependentUpon>PendaftaranForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\PengelolaanDataForm.resx">
+      <DependentUpon>PengelolaanDataForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="kuota.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
