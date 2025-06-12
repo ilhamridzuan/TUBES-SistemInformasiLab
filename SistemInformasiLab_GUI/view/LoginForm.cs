@@ -1,24 +1,17 @@
 ﻿using SistemInformasiLab_GUI.controller;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using SistemInformasiLab_GUI.utils;
-
+using System;
+using System.Windows.Forms;
 
 namespace SistemInformasiLab_GUI.view
 {
     public partial class LoginForm : Form
     {
         private readonly AuthController controller;
+
         public LoginForm()
         {
-            controller = new AuthController("http://localhost:5031/");
+            controller = new AuthController("https://localhost:5031/");
             InitializeComponent();
         }
 
@@ -26,31 +19,26 @@ namespace SistemInformasiLab_GUI.view
         {
             string username = InputUsername.Text.Trim();
             string password = InputPassword.Text.Trim();
-            if (!InputValidator.ValidateNotEmpty(username, "Username")) return;
-            if (!InputValidator.ValidateMinLength(password, "Password", 8)) return;
 
-            var result = await controller.LoginAsync(username, password);
-            MessageBox.Show($"\n{result.Message}");
-            if (result.Role != null)
+            if (!InputValidator.ValidateNotEmpty(username, "Username") ||
+                !InputValidator.ValidateMinLength(password, "Password", 8))
+                return;
+
+            try
             {
-                if (result.Role == "Pasien")
+                var result = await controller.LoginAsync(username, password);
+                MessageBox.Show($"\n{result.Message}");
+
+                if (!string.IsNullOrEmpty(result.Role))
                 {
-                    DashboardPasien dashboardPasien = new DashboardPasien();
-                    dashboardPasien.Show();
+                    var dashboard = DashboardFactory.CreateDashboard(result.Role);
+                    dashboard.Show();
                     this.Hide();
                 }
-                else if (result.Role == "Dokter")
-                {
-                    DashboardDokter dashboardDokter = new DashboardDokter();
-                    dashboardDokter.Show();
-                    this.Hide();
-                }
-                else if (result.Role == "Petugas")
-                {
-                    DashboardPetugas dashboardPetugas = new DashboardPetugas();
-                    dashboardPetugas.Show();
-                    this.Hide();
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Terjadi kesalahan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -58,8 +46,25 @@ namespace SistemInformasiLab_GUI.view
         {
             RegisterForm registerForm = new RegisterForm();
             registerForm.Show();
-
             this.Hide();
+        }
+    }
+
+    public static class DashboardFactory
+    {
+        public static Form CreateDashboard(string role)
+        {
+            switch (role.ToLower())
+            {
+                case "pasien":
+                    return new DashboardPasien();
+                case "dokter":
+                    return new DashboardDokter();
+                case "petugas":
+                    return new DashboardPetugas();
+                default:
+                    throw new ArgumentException("Role tidak dikenali.");
+            }
         }
     }
 }

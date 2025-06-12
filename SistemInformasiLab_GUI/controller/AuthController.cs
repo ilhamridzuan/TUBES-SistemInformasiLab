@@ -1,10 +1,7 @@
 ﻿using SistemInformasiLab_GUI.model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SistemInformasiLab_GUI.controller
@@ -12,6 +9,7 @@ namespace SistemInformasiLab_GUI.controller
     class AuthController
     {
         private readonly HttpClient _client;
+
         public AuthController(string baseAddress)
         {
             if (string.IsNullOrWhiteSpace(baseAddress))
@@ -25,41 +23,55 @@ namespace SistemInformasiLab_GUI.controller
 
         public async Task<RegisterResponse> RegisterAsync(string fullname, string email, string username, string password, string role)
         {
-            var response = await _client.PostAsJsonAsync("api/auth/register", new
+            try
             {
-                Fullname = fullname,
-                Email = email,
-                Username = username,
-                Password = password,
-                Role = role
-            });
+                var response = await _client.PostAsJsonAsync("api/auth/register", new
+                {
+                    Fullname = fullname,
+                    Email = email,
+                    Username = username,
+                    Password = password,
+                    Role = role
+                });
 
-            if (!response.IsSuccessStatusCode)
-            {
-                string error = await response.Content.ReadAsStringAsync();
-                return new RegisterResponse { Message = $"Registrasi gagal: {response.StatusCode} - {error}" };
+                if (!response.IsSuccessStatusCode)
+                {
+                    string error = await response.Content.ReadAsStringAsync();
+                    return new RegisterResponse { Message = $"Registrasi gagal: {response.StatusCode} - {error}" };
+                }
+
+                return await response.Content.ReadFromJsonAsync<RegisterResponse>()
+                       ?? new RegisterResponse { Message = "Registrasi gagal: respons tidak valid." };
             }
-
-            return await response.Content.ReadFromJsonAsync<RegisterResponse>()
-                   ?? new RegisterResponse { Message = "Registrasi gagal: respons tidak valid." };
+            catch (Exception ex)
+            {
+                return new RegisterResponse { Message = $"Terjadi kesalahan saat registrasi: {ex.Message}" };
+            }
         }
 
         public async Task<LoginResponse> LoginAsync(string username, string password)
         {
-            var response = await _client.PostAsJsonAsync("api/auth/login", new
+            try
             {
-                Username = username,
-                Password = password
-            });
+                var response = await _client.PostAsJsonAsync("api/auth/login", new
+                {
+                    Username = username,
+                    Password = password
+                });
 
-            if (!response.IsSuccessStatusCode)
-            {
-                string error = await response.Content.ReadAsStringAsync();
-                return new LoginResponse { Message = $"Login gagal: {response.StatusCode} - {error}", Role = null };
+                if (!response.IsSuccessStatusCode)
+                {
+                    string error = await response.Content.ReadAsStringAsync();
+                    return new LoginResponse { Message = $"Login gagal: {response.StatusCode} - {error}", Role = null };
+                }
+
+                return await response.Content.ReadFromJsonAsync<LoginResponse>()
+                       ?? new LoginResponse { Message = "Login gagal: respons tidak valid.", Role = null };
             }
-
-            return await response.Content.ReadFromJsonAsync<LoginResponse>()
-                   ?? new LoginResponse { Message = "Login gagal: respons tidak valid.", Role = null };
+            catch (Exception ex)
+            {
+                return new LoginResponse { Message = $"Terjadi kesalahan saat login: {ex.Message}", Role = null };
+            }
         }
     }
 }
