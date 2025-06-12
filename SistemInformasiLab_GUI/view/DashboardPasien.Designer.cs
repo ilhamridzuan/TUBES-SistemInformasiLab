@@ -30,7 +30,6 @@
         {
             this.btnPendaftaran = new Guna.UI2.WinForms.Guna2Button();
             this.btnLihatHasil = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAntrian = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
@@ -68,22 +67,6 @@
             this.btnLihatHasil.Text = "Lihat Hasil Pemeriksaan";
             this.btnLihatHasil.Click += new System.EventHandler(this.btnLihatHasil_Click);
             // 
-            // btnAntrian
-            // 
-            this.btnAntrian.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAntrian.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAntrian.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAntrian.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAntrian.FillColor = System.Drawing.Color.Indigo;
-            this.btnAntrian.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAntrian.ForeColor = System.Drawing.Color.White;
-            this.btnAntrian.Location = new System.Drawing.Point(238, 515);
-            this.btnAntrian.Name = "btnAntrian";
-            this.btnAntrian.Size = new System.Drawing.Size(272, 84);
-            this.btnAntrian.TabIndex = 2;
-            this.btnAntrian.Text = "Lihat Antrian";
-            this.btnAntrian.Click += new System.EventHandler(this.btnAntrian_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -114,7 +97,7 @@
             this.btnLogOut.FillColor = System.Drawing.Color.GhostWhite;
             this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogOut.ForeColor = System.Drawing.Color.Black;
-            this.btnLogOut.Location = new System.Drawing.Point(238, 667);
+            this.btnLogOut.Location = new System.Drawing.Point(238, 618);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(272, 84);
             this.btnLogOut.TabIndex = 5;
@@ -129,7 +112,6 @@
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnAntrian);
             this.Controls.Add(this.btnLihatHasil);
             this.Controls.Add(this.btnPendaftaran);
             this.Name = "DashboardPasien";
@@ -144,7 +126,6 @@
 
         private Guna.UI2.WinForms.Guna2Button btnPendaftaran;
         private Guna.UI2.WinForms.Guna2Button btnLihatHasil;
-        private Guna.UI2.WinForms.Guna2Button btnAntrian;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
