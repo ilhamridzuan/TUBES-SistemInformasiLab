@@ -1,4 +1,5 @@
 ﻿using SistemInformasiLab_GUI.controller;
+using SistemInformasiLab_GUI.model;
 using SistemInformasiLab_GUI.utils;
 using System;
 using System.Windows.Forms;
@@ -11,7 +12,7 @@ namespace SistemInformasiLab_GUI.view
 
         public LoginForm()
         {
-            controller = new AuthController("https://localhost:5031/");
+            controller = new AuthController("http://localhost:5031/");
             InitializeComponent();
         }
 
@@ -50,7 +51,7 @@ namespace SistemInformasiLab_GUI.view
         }
     }
 
-    public static class DashboardFactory
+    public class DashboardFactory
     {
         public static Form CreateDashboard(string role)
         {

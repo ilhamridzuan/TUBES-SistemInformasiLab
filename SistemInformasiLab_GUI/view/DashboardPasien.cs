@@ -13,8 +13,6 @@ namespace SistemInformasiLab_GUI.view
 {
     public partial class DashboardPasien: Form
     {
-        private readonly PasienModel pasienTerdaftar;
-
         public DashboardPasien()
         {
             InitializeComponent();
@@ -26,14 +24,6 @@ namespace SistemInformasiLab_GUI.view
             PendaftaranForm formPendaftaran = new PendaftaranForm();
             formPendaftaran.Show();
         }
-
-        private void btnAntrian_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AntrianForm formAntrian = new AntrianForm(pasienTerdaftar);
-            formAntrian.Show();
-        }
-
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
