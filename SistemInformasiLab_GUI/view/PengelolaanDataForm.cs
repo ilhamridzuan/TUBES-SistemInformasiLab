@@ -1,5 +1,6 @@
 ﻿using SistemInformasiLab_GUI.controller;
 using SistemInformasiLab_GUI.model;
+using SistemInformasiLab_GUI.utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -147,7 +148,8 @@ namespace SistemInformasiLab_GUI.view
                 }
                 else
                 {
-                    MessageBox.Show("Gagal menghapus data.");
+                    AppHelper.ShowError("Gagal menghapus data!");
+                    var formatted = AppHelper.FormatTanggal(DateTime.Now);
                 }
             }
             catch (Exception ex)

@@ -23,5 +23,12 @@ namespace SistemInformasiLab_GUI.view
             LoginForm login = new LoginForm();
             login.Show();
         }
+
+        private void btnLihatHasil_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LihatHasilFormDokter lihatHasil = new LihatHasilFormDokter();
+            lihatHasil.Show();
+        }
     }
 }

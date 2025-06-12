@@ -33,7 +33,9 @@ namespace SistemInformasiLab_GUI.view
 
         private void btnLihatHasil_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            LihatHasilFormPasien lihatHasil = new LihatHasilFormPasien();
+            lihatHasil.Show();
         }
     }
 }

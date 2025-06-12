@@ -26,7 +26,9 @@ namespace SistemInformasiLab_GUI.view
 
         private void btnLihatHasil_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            LihatHasilForm lihatHasil = new LihatHasilForm();
+            lihatHasil.Show();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
