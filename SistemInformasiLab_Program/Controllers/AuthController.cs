@@ -62,8 +62,6 @@ namespace SistemInformasiLab_Program.Controllers
 
                 Console.Write("Email: ");
                 string email = Console.ReadLine();
-                InputValidator.ValidateNotEmpty(email, "Email");
-                InputValidator.ValidateEmail(email);
 
                 Console.Write("Username: ");
                 string username = Console.ReadLine();
