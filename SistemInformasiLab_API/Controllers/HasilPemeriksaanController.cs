@@ -25,7 +25,7 @@ namespace SistemInformasiLab_API.Controllers
             return Ok(_data);
         }
 
-        [HttpPost]
+        [HttpPost] 
         public IActionResult Create([FromBody] HasilPemeriksaan input)
         {
             if (!ModelState.IsValid)

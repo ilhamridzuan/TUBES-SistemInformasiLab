@@ -67,7 +67,7 @@ namespace SistemInformasiLab_GUI.controller
         /// <param name="id">ID data yang ingin diperbarui.</param>
         /// <param name="data">Data baru hasil pemeriksaan.</param>
         /// <returns>True jika berhasil, false jika gagal.</returns>
-        public async Task<bool> Update(string id, HasilPemeriksaan data)
+        public async Task<bool> Update(string id, HasilPemeriksaan data) 
         {
             try
             {

@@ -14,7 +14,7 @@ namespace UnitTest_Auth
     {
         private const string BaseUrl = "http://localhost:5031/";
 
-        // Method ini membuat HttpClient palsu (mock) untuk menghindari pemanggilan API sungguhan
+        // Method ini membuat HttpClient palsu (mock) untuk menghindari pemanggilan API sunggu han
         private HttpClient CreateMockHttpClient(HttpResponseMessage response)
         {
             // Buat handler palsu untuk intercept request dan langsung kembalikan response yang kita tentukan

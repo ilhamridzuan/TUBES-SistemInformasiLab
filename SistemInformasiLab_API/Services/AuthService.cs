@@ -31,7 +31,6 @@ namespace SistemInformasiLab_API.Services
         {
             // === PRECONDITIONS ===
             InputValidator.ValidateNotEmpty(fullname, nameof(fullname));
-            InputValidator.ValidateNotEmpty(email, nameof(email));
             InputValidator.ValidateEmail(email);
             InputValidator.ValidateNotEmpty(username, nameof(username));
             InputValidator.ValidateMinLength(username, nameof(username), 4);
